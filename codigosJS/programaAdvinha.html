@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var tentativa = 1;
+    var numeroPensou = Math.round(Math.randon()*10);
+     
+
+    while(tentativa<=3){
+        var chute = parseInt(prompt("Informe um número"))
+
+        if(numeroPensou===chute){
+           mostra("Parabéns, você acertou!");
+           break;
+        } else{
+           mostra("Tente mais uma vez. O número pensado foi " + numeroPensou);
+          
+        }
+        tentativas++;
+           
+    
+    }
+    mostra ("FIM")
+</script>

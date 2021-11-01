@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<h1>JOGO DA ADVINHAÇÃO</h1>
+
+<h2>Vamos testar sua sorte? Digite um número de 0 a 10</h2>
+<input />
+<button>Enviar segredo</button>
+
+
+
+<script>
+
+    var segredo = Math.round(Math.random * 10);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    
+
+    function verifica() {
+        if (input.value == segredo) {
+            alert("Parabéns, acertou");
+            
+        } else {
+            alert("Você errou! Tente novamente");
+            
+        }
+        input.value ="";
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick=verifica;
+
+</script>
